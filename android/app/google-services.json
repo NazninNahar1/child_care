@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "146368727136",
+    "project_id": "child-care-cd726",
+    "storage_bucket": "child-care-cd726.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146368727136:android:bff3fdc20fbe0c6e035b05",
+        "android_client_info": {
+          "package_name": "com.example.child_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146368727136-g0t637jasu9gdc9fve86pmamrc6npr1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsUITqaQ-lsjnDCm19Ql_kk226QhWlj7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146368727136-g0t637jasu9gdc9fve86pmamrc6npr1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
