@@ -179,13 +179,15 @@ class _SignupScreenState extends State<SignupScreen> {
                         padding: EdgeInsets.symmetric(horizontal: 15),
                         width: double.infinity,
                         height: 100,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.deepPurple,
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                            ),
+                            onPressed: _submit,
+                            child: const Text('Continue',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
                           ),
-                          onPressed: _submit,
-                          child: const Text('Continue',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w400),),
                         ),
 
                       ),

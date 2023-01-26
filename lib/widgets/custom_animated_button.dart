@@ -56,7 +56,7 @@ class _CustomAnimatedButtonState extends State<CustomAnimatedButton> {
             onTap: ontapped,
             child: AnimatedContainer(
               height: 50,
-              width: 300,
+              width: 309,
               decoration: BoxDecoration(
                   color: boxColor,
                   borderRadius: BorderRadius.circular(20)
