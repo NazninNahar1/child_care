@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'doctor_details.dart';
 
-class DoctorList extends StatefulWidget {
-  const DoctorList({Key? key}) : super(key: key);
+class AmbulanceList extends StatefulWidget {
+  const AmbulanceList({Key? key}) : super(key: key);
 
   @override
-  State<DoctorList> createState() => _DoctorListState();
+  State<AmbulanceList> createState() => _AmbulanceListState();
 }
 
-List doctorList = [
+List ambulanceList = [
   'name',
   'name',
   'name',
@@ -18,12 +18,12 @@ List doctorList = [
   'name',
 ];
 
-class _DoctorListState extends State<DoctorList> {
+class _AmbulanceListState extends State<AmbulanceList> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          backgroundColor: const Color(0xfff3f1f3),
+            backgroundColor: const Color(0xfff3f1f3),
             body: Container(
 
               height: MediaQuery.of(context).size.height,
@@ -36,18 +36,21 @@ class _DoctorListState extends State<DoctorList> {
                     child: Row(
                       children: [
                         InkWell(
-                          onTap: (){
-                            Navigator.pop(context);
-                          },
+                            onTap: (){
+                              Navigator.pop(context);
+                            },
 
                             child: const Icon(Icons.arrow_back_rounded)),
                         Container(
                           height: 60,
                           width: 315,
-
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            //color: Colors.deepPurple,
+                          ),
                           child: const Center(
                             child: Text(
-                              'Doctor List',
+                              'Ambulance List',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 25,
@@ -62,7 +65,7 @@ class _DoctorListState extends State<DoctorList> {
                     child: SizedBox(
                       height: 200.0,
                       child: ListView.builder(
-                        itemCount: doctorList.length,
+                        itemCount: ambulanceList.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -80,15 +83,15 @@ class _DoctorListState extends State<DoctorList> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(5.0),
                                       child: Container(
                                         height: 100,
                                         width: 100,
                                         decoration: BoxDecoration(
-                                          color:const Color(0xffE0AFF2),
+                                          color:const Color(0xff7A87FB),
                                           borderRadius: BorderRadius.circular(15),
                                         ),
-                                        child: Image.asset('asset/image.png'),
+                                        child: Image.asset('asset/img.png'),
 
                                       ),
                                     ),
@@ -96,8 +99,8 @@ class _DoctorListState extends State<DoctorList> {
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
                                         children: const [
-                                          Text('Doctor Name',style: TextStyle(color: Colors.deepPurpleAccent,fontSize: 18),),
-                                          Text('Doctor designation'),
+                                          Text('Toyota Hiace GL',style: TextStyle(color: Color(0xff7A87FB),fontSize: 18),),
+                                          Text('Isolation / 4 Seat'),
                                         ],
                                       ),
                                     ),

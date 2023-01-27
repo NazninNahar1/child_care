@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'apointment.dart';
+
 class DoctorDetails extends StatefulWidget {
   const DoctorDetails({Key? key}) : super(key: key);
 
@@ -210,7 +212,9 @@ class _DoctorDetailsState extends State<DoctorDetails> {
 
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AppointmentBookingScreen()));
+                                  },
                                   child: Text('AppointMent',style: TextStyle(color: Colors.black),),
                                 ),
                               ),

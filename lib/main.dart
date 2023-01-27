@@ -1,6 +1,8 @@
-import 'package:child_care/screens/dashboard.dart';
+import 'package:child_care/screens/ambulance_list.dart';
+import 'package:child_care/screens/apointment.dart';
 import 'package:child_care/screens/login.dart';
-import 'package:child_care/screens/splash.dart';
+import 'package:child_care/screens/vaccine/chicken_pox.dart';
+import 'package:child_care/screens/vaccine/rotata.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -13,12 +15,13 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+
       debugShowCheckedModeBanner: false,
-      home: SplashScreenOne(),
+      home: ChickenPox(),
     );
   }
 }

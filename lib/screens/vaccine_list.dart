@@ -34,16 +34,12 @@ class _VaccineState extends State<Vaccine> {
                     Container(
                       height: 60,
                       width: 315,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.deepPurple,
-                      ),
                       child: const Center(
                         child: Text(
                           'Vaccine List',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
+                              color: Colors.black,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -73,7 +69,7 @@ class _VaccineState extends State<Vaccine> {
                     ),
                     child: const Center(
                       child: Text(
-                        'Doctor List',
+                        'Rota Virus',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -96,7 +92,7 @@ class _VaccineState extends State<Vaccine> {
                   ),
                   child: const Center(
                     child: Text(
-                      'Vaccine List',
+                      'Chickenpox/Varicella',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -118,7 +114,7 @@ class _VaccineState extends State<Vaccine> {
                   ),
                   child: const Center(
                     child: Text(
-                      'Child Diet',
+                      'Hepatitis A',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -140,7 +136,7 @@ class _VaccineState extends State<Vaccine> {
                   ),
                   child: const Center(
                     child: Text(
-                      'Suggestion',
+                      'Typhoid',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -162,7 +158,7 @@ class _VaccineState extends State<Vaccine> {
                   ),
                   child: const Center(
                     child: Text(
-                      'Medical Records',
+                      'Meningococcal-C-Conjugate',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -184,7 +180,7 @@ class _VaccineState extends State<Vaccine> {
                   ),
                   child: const Center(
                     child: Text(
-                      'Emergency Contact',
+                      'Influence',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,

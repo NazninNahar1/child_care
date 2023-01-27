@@ -1,6 +1,7 @@
 import 'package:child_care/screens/vaccine_list.dart';
 import 'package:flutter/material.dart';
 
+import 'ambulance_list.dart';
 import 'doctor_list.dart';
 
 class Dashboard extends StatefulWidget {
@@ -35,17 +36,13 @@ class _DashboardState extends State<Dashboard> {
                       Container(
                         height: 60,
                         width: 315,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.deepPurple,
-                        ),
                         child: const Center(
                           child: Text(
-                            'Home',
+                            'See & Select',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,),
                           ),
                         ),
                       ),
@@ -280,22 +277,28 @@ class _DashboardState extends State<Dashboard> {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 280,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(15),
-                              bottomRight: Radius.circular(15)),
-                          color: Color(0xffF4DDFD),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Emergency Contact',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                      InkWell(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context)=>AmbulanceList()));
+
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 280,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(15),
+                                bottomRight: Radius.circular(15)),
+                            color: Color(0xffF4DDFD),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Ambulance',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ),
