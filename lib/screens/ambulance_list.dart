@@ -70,9 +70,9 @@ class _AmbulanceListState extends State<AmbulanceList> {
                           return Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: InkWell(
-                              onTap: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DoctorDetails()));
-                              },
+                              // onTap: (){
+                              //   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DoctorDetails()));
+                              // },
                               child: Card(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15),

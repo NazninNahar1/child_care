@@ -16,6 +16,11 @@ class _AppointmentBookingScreenState extends State<AppointmentBookingScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+            child: Icon(Icons.arrow_back,color: Colors.black,)),
         elevation: 0,
         title: Center(
             child: Text(

@@ -2,7 +2,11 @@ import 'package:child_care/screens/vaccine_list.dart';
 import 'package:flutter/material.dart';
 
 import 'ambulance_list.dart';
+import 'diet_chart/diet_one.dart';
+import 'diet_chart/quick_sugestion.dart';
 import 'doctor_list.dart';
+import 'notes/medical_records.dart';
+import 'notes/notes_one.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -32,7 +36,11 @@ class _DashboardState extends State<Dashboard> {
                   padding: const EdgeInsets.all(15.0),
                   child: Row(
                     children: [
-                      const Icon(Icons.arrow_back_rounded),
+                      InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+                          child: const Icon(Icons.arrow_back_rounded)),
                       Container(
                         height: 60,
                         width: 315,
@@ -160,104 +168,170 @@ class _DashboardState extends State<Dashboard> {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 280,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(15),
-                              bottomRight: Radius.circular(15)),
-                          color: Color(0xffF4DDFD),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Child Diet',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                      InkWell(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context)=>ChildDietChartOne()));
+
+                        },
+
+                        child: Container(
+                          height: 50,
+                          width: 280,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(15),
+                                bottomRight: Radius.circular(15)),
+                            color: Color(0xffF4DDFD),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Child Diet',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Color(0xffE0AFF2),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            'asset/message.png',
+                InkWell(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Suggestion()));
+
+                    },
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            color: Color(0xffE0AFF2),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'asset/message.png',
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 280,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(15),
-                              bottomRight: Radius.circular(15)),
-                          color: Color(0xffF4DDFD),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Suggestion',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                        Container(
+                          height: 50,
+                          width: 280,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(15),
+                                bottomRight: Radius.circular(15)),
+                            color: Color(0xffF4DDFD),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Suggestion',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Color(0xffE0AFF2),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            'asset/pescription.png',
+                InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder:(context)=>MedicalRecords()));
+
+                  },
+
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            color: Color(0xffE0AFF2),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'asset/pescription.png',
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 280,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(15),
-                              bottomRight: Radius.circular(15)),
-                          color: Color(0xffF4DDFD),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Medical Records',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                        Container(
+                          height: 50,
+                          width: 280,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(15),
+                                bottomRight: Radius.circular(15)),
+                            color: Color(0xffF4DDFD),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Medical Records',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Notes()));
+
+                  },
+
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            color: Color(0xffE0AFF2),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'asset/pescription.png',
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: 280,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(15),
+                                bottomRight: Radius.circular(15)),
+                            color: Color(0xffF4DDFD),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Notes',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(

@@ -34,13 +34,17 @@ class _ChickenPoxState extends State<ChickenPox> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Align(alignment:Alignment.topLeft ,
-                      child: Icon(Icons.arrow_back)),
+                      child: InkWell(
+                          onTap:(){
+                            Navigator.pop(context);
+
+                      },child: Icon(Icons.arrow_back))),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
                       child: Text(
-                        'Did you taken your Rota virus Vaccine?',
+                        'Did you taken your Chicken Pox virus Vaccine?',
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                       )),
                 ),
@@ -91,9 +95,9 @@ class _ChickenPoxState extends State<ChickenPox> {
                   initialSelectedDate: DateTime.now(),
                   selectionColor: Colors.deepPurple,
                   selectedTextColor: Colors.white,
-                  inactiveDates: [
-                    DateTime.now().add(Duration(days: 3)),
-                  ],
+                  // inactiveDates: [
+                  //   DateTime.now().add(Duration(days: 3)),
+                  // ],
                   onDateChange: (date) {
                     // New date selected
                     setState(() {

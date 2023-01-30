@@ -26,8 +26,13 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                   height: 100,
                   width: double.infinity,
                   child: Row(
-                    children: const [
-                      Icon(Icons.arrow_back),
+                    children: [
+                      InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+
+                        },
+                          child: Icon(Icons.arrow_back)),
                       SizedBox(
                         width: 100,
                       ),
@@ -188,38 +193,21 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                             ),
                           ],
                         ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Center(
-                                child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Color(0xff7A87FB),
+                        Expanded(
+                          child: Center(
+                            child: ElevatedButton(
 
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                  ),
-                                  onPressed: () {},
-                                  child: Text('Video Call'),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Center(
-                                child: ElevatedButton(
-                                  
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Color(0xfffdfdff),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xfffdfdff),
 
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                  ),
-                                  onPressed: () {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AppointmentBookingScreen()));
-                                  },
-                                  child: Text('AppointMent',style: TextStyle(color: Colors.black),),
-                                ),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                               ),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AppointmentBookingScreen()));
+                              },
+                              child: Text('AppointMent',style: TextStyle(color: Colors.black),),
                             ),
-                          ],
+                          ),
                         ),
                       ],
                     ),

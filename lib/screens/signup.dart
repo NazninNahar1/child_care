@@ -73,7 +73,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 color: Colors.deepPurple,
                               ),
                             ),
-                            labelText: 'Email Address',
+                            labelText: 'Username',
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(width: 1, color: Colors.grey), //<-- SEE HERE
                               borderRadius: BorderRadius.circular(50.0),
